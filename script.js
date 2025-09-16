@@ -264,7 +264,11 @@ function checkCollisions() {
 
             gameOver = true;
             gameOverScreen.style.display = 'flex';
-            finalScoreElement.textContent = score;
+            if (score <= 50) {
+                finalScoreElement.textContent = "You are too noob for it";
+            } else {
+                finalScoreElement.textContent = "Final Score: " + score;
+            }
             saveHighScore();
             cancelAnimationFrame(gameLoopId);
         }
@@ -305,7 +309,11 @@ function update() {
     if (player.y > canvas.height) {
         gameOver = true;
         gameOverScreen.style.display = 'flex';
-        finalScoreElement.textContent = score;
+        if (score <= 50) {
+            finalScoreElement.textContent = "You are too noob for it";
+        } else {
+            finalScoreElement.textContent = "Final Score: " + score;
+        }
         saveHighScore();
         cancelAnimationFrame(gameLoopId);
         return;
