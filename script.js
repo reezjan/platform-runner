@@ -310,8 +310,8 @@ function update() {
         gameOver = true;
         gameOverScreen.style.display = 'flex';
         if (score <= 50) {
-            finalScoreElement.textContent = "You are too noob for it";
-        } else {
+            finalScoreElement.textContent = "You are too noob for it 🤣🤣";
+        } else {  
             finalScoreElement.textContent = "Final Score: " + score;
         }
         saveHighScore();
@@ -394,3 +394,4 @@ playAgainBtnEnd.addEventListener('click', function() {
 
 init();
 gameLoop();
+
