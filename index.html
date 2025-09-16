@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Jumper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-title">Platform Jumper</div>
+            <div class="score-container">
+                <div class="score-info">
+                    Score: <span class="score-value" id="scoreValue">0</span>
+                </div>
+                <div class="score-info">
+                    High Score: <span class="score-value" id="highScoreValue">0</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="restartBtn">Restart</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        <div class="game-over" id="gameOverScreen">
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="finalScore">0</span></p>
+            <p id="newHighScoreText" style="display: none;">NEW HIGH SCORE!</p>
+            <p class="you-are-awesome" style="display: none;">YOU ARE AWESOME!</p>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+        <div class="game-end" id="gameEndScreen" style="display: none;">
+            <h2>You Escaped!</h2>
+            <p>Your journey is complete.</p>
+            <div class="final-animation"></div>
+            <button id="playAgainBtnEnd">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
